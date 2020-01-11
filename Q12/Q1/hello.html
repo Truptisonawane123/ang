@@ -1,0 +1,44 @@
+<html>
+<head>
+  <style>
+  div {
+    position: absolute;
+    background-color: yellow;
+    left: 50px;
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+  }
+  </style>
+ <script src="jquery-3.4.1.min.js"></script>
+</head>
+<body>
+ 
+<button id="right">Animate</button>
+<button id="fade" class="fd">Fade the box</button>
+<div class="block">Hello World!</div>
+ 
+<script>
+$( "#right" ).click(function() {
+  $( ".block" ).animate({ "left": "400px" }, "slow" ).animate({
+      height: 200,
+  	width: 400,
+    }, {
+      queue: false,
+      duration: 3000
+    });
+});
+
+$( "#fade" ).click(function(){
+$( ".block" ).animate({
+  
+  opacity: 0.3
+}, {
+  duration: 500,
+  queue: false
+});
+});
+</script>
+ 
+</body>
+</html>
